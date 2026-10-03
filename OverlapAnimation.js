@@ -98,8 +98,6 @@ function App() {
           Math.abs(dragCenterX - targetCenterX) <= TOLERANCE &&
           Math.abs(dragCenterY - targetCenterY) <= TOLERANCE;
 
-
-        // Safely pass the boolean value back to the React state thread
         runOnJS(setIsOverlapping1)(exactMatch);
 
       }
@@ -119,25 +117,19 @@ function App() {
     const draggableLayout = measure(draggble2Ref);
 
       if(draggableLayout && targetLayout) {
-
-                    /* APPROACH - TO GET THE EXACT OVERLAPPING */ 
-          // 1. Find the centers
+  
         const dragCenterX = draggableLayout.pageX + (draggableLayout.width / 2);
         const dragCenterY = draggableLayout.pageY + (draggableLayout.height / 2);
         const targetCenterX = targetLayout.pageX + (targetLayout.width / 2);
         const targetCenterY = targetLayout.pageY + (targetLayout.height / 2);
 
-        // 2. Set pixel buffer allowance 
         const TOLERANCE = 8; 
-
-        // 3. Check alignment
+        
         const exactMatch = 
           Math.abs(dragCenterX - targetCenterX) <= TOLERANCE &&
           Math.abs(dragCenterY - targetCenterY) <= TOLERANCE;
 
-
-        // Safely pass the boolean value back to the React state thread
-        runOnJS(setIsOverlapping2)(exactMatch);
+          runOnJS(setIsOverlapping2)(exactMatch);
       }
   });
 
@@ -154,24 +146,19 @@ function App() {
       const draggableLayout = measure(draggble3Ref);
 
       if(draggableLayout && targetLayout) {
-
-                    /* APPROACH - TO GET THE EXACT OVERLAPPING */ 
-          // 1. Find the centers
+        
         const dragCenterX = draggableLayout.pageX + (draggableLayout.width / 2);
         const dragCenterY = draggableLayout.pageY + (draggableLayout.height / 2);
         const targetCenterX = targetLayout.pageX + (targetLayout.width / 2);
         const targetCenterY = targetLayout.pageY + (targetLayout.height / 2);
 
-        // 2. Set pixel buffer allowance 
+
         const TOLERANCE = 8; 
 
-        // 3. Check alignment
         const exactMatch = 
           Math.abs(dragCenterX - targetCenterX) <= TOLERANCE &&
           Math.abs(dragCenterY - targetCenterY) <= TOLERANCE;
 
-
-        // Safely pass the boolean value back to the React state thread
         runOnJS(setIsOverlapping3)(exactMatch);
       }
   });
@@ -190,23 +177,17 @@ function App() {
 
       if(draggableLayout && targetLayout) {
 
-                    /* APPROACH - TO GET THE EXACT OVERLAPPING */ 
-          // 1. Find the centers
         const dragCenterX = draggableLayout.pageX + (draggableLayout.width / 2);
         const dragCenterY = draggableLayout.pageY + (draggableLayout.height / 2);
         const targetCenterX = targetLayout.pageX + (targetLayout.width / 2);
         const targetCenterY = targetLayout.pageY + (targetLayout.height / 2);
 
-        // 2. Set pixel buffer allowance 
         const TOLERANCE = 8; 
 
-        // 3. Check alignment
         const exactMatch = 
           Math.abs(dragCenterX - targetCenterX) <= TOLERANCE &&
           Math.abs(dragCenterY - targetCenterY) <= TOLERANCE;
 
-
-        // Safely pass the boolean value back to the React state thread
         runOnJS(setIsOverlapping4)(exactMatch);
       }
   });
